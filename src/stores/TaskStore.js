@@ -8,12 +8,15 @@ export const useTaskStore = defineStore('taskStore', {
     tasks: [
       { id: 1, title: 'buy some milk', isFav: false },
       { id: 2, title: 'play Gloomhaven', isFav: true },
+      { id: 3, title: 'do the dishes', isFav: true },
+      { id: 4, title: 'return amazon', isFav: true },
+
     ],
   }), //return an object.
   getters: {
     favs() {
       //filtered version - non destructive.
-      return this.tasks.filter(t => t.title)
+      return this.tasks.filter(t => t.isFav)
     },
     favCount() {
       return this.tasks.reduce((p, c) => {
