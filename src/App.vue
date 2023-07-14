@@ -46,8 +46,7 @@
     components: { TaskDetails, TaskForm },
     setup() {
       const taskStore = useTaskStore()
-
-      const filter = ref('all')
+      const filter = ref('all') //initial value: all
 
       return { taskStore, filter }
     }
